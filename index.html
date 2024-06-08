@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Js Ass-1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header>
+        <h1 class="text-center fs-1 mt-5">JS ASSIGNMENT NO.1</h1>
+    </header>
+    <main class="container">
+        <div class="row text-center mt-5"  >
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            Q-1
+                          </div>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="row g-0">
+                            <div class="col-md-5" style="background-color: black; color: wheat;">
+                              <pre class="ms-2" style="color: wheat;">
+                                <code>
+let value = ''
+inputs[0].addEventListener("keyup",(event)=>{
+    let reqEx = /^(\d+$|-\d+$|-)/
+    if(reqEx.test(event.key)){
+        if (event.key){
+            value+=event.key
+            outputs[0].style.backgroundColor = "green";
+            outputs[0].style.padding = "15px"
+            outputs[0].style.color = "#fff"
+        } 
+    }
+    if(event.key == "Backspace"){
+        value = inputs[0].value         
+    }
+    if(inputs[0].value.length===0){
+        outputs[0].innerHTML = ""
+        outputs[0].style.backgroundColor = "#fff";    
+    }
+    outputs[0].innerHTML = value;
+})
+
+inputs[0].addEventListener("focusout",()=>{
+    inputs[0].value = ""
+    outputs[0].innerHTML = ""
+    outputs[0].style.backgroundColor = "#fff";
+})
+                                </code>
+                              </pre>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="card-body">
+                                <p class="card-text">Write a program that allow to user enter number then print it</p>
+                                <p style="color: rgb(136, 39, 22);">We Accept only numbers</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="ms-3">
+                                        <input type="number" class="form-control" placeholder="Please Enter a number">
+                                    </div>
+                                    <div>
+                                        <p class="output"></p>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Q-2
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="row g-0">
+                            <div class="col-md-5" style="background-color: black; color: wheat;">
+                                <pre style="color: wheat;">
+                                    <code>
+let value2 = ''
+inputs[1].addEventListener("keyup",(e)=>{
+    let reqExnum = /^(\d+$|-\d+$|-)/
+    if(reqExnum.test(e.key)){
+        value+=e.key
+    }
+
+    if(e.key == "Backspace"){
+        value = inputs[1].value         
+    }
+
+    if(+value%4 === 0 && +value%3 === 0){
+        outputs[1].innerHTML = 'YES'
+        outputs[1].style.backgroundColor = "green";
+        outputs[1].style.padding = "15px"
+        outputs[1].style.color = "#fff"
+    }else{
+        outputs[1].innerHTML = 'NO'
+        outputs[1].style.backgroundColor = "red";
+        outputs[1].style.padding = "15px"
+        outputs[1].style.color = "#fff"
+    }
+
+    if(inputs[1].value.length===0){
+        outputs[1].innerHTML = ""
+        outputs[1].style.backgroundColor = "#fff";    
+    }
+})
+
+inputs[0].addEventListener("focusout",()=>{
+    inputs[1].value = ""
+    outputs[1].innerHTML = ""
+    outputs[1].style.backgroundColor = "#fff";
+})
+                                   </code>
+                                </pre>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="card-body">
+                                <p class="card-text">Write a program that take number from user then print yes if that number can divide by 3 and 4 otherwise print no.</p>
+                                <p style="color: rgb(136, 39, 22);">We Accept only numbers</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="ms-3">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                    <div>
+                                        <p class="output"></p>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Q-3
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="row g-0">
+                            <div class="col-md-6" style="background-color: black; color: wheat;">
+                                <pre class="p-2" style="color: wheat;">
+                                    <code>
+buttons[0].addEventListener("click",()=>{
+    let reqExnum = /^(\d+$|-\d+$|-)/
+    if(reqExnum.test(inputs[2].value) && 
+    reqExnum.test(inputs[3].value)){
+        if(+inputs[2].value > +inputs[3].value){
+            buttons[0].classList.add("d-none")
+            outputs[2].innerHTML = "First number is " +
+            inputs[2].value+
+            " & second number is "
+            +inputs[3].value+" Max is "+
+            inputs[2].value
+            outputs[2].style.color = "green"    
+        }else{
+            buttons[0].classList.add("d-none")
+            outputs[2].innerHTML = "First number is " +
+            inputs[2].value+" & second number is "+
+            inputs[3].value+" Max is "+
+            inputs[3].value
+            outputs[2].style.color = "green"
+        }
+    }else{
+        buttons[0].classList.add("d-none")
+        outputs[2].innerHTML = "Please Enter valid numbers"
+        outputs[2].style.color = "red"
+    }
+    inputs[2].value =""
+    inputs[3].value =""
+})
+inputs[2].addEventListener("focus",()=>{
+    buttons[0].classList.remove("d-none")
+    outputs[2].innerHTML = ""
+})
+inputs[3].addEventListener("focus",()=>{
+buttons[0].classList.remove("d-none")
+outputs[2].innerHTML = ""
+})
+                                   </code>
+                                </pre>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="card-body">
+                                <p class="card-text">Write a program that allows the user to insert 2 integers then print the max</p>
+                                <p style="color: rgb(136, 39, 22);">We Accept only numbers</p>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="number" class="form-control" placeholder="Please enter a number">
+                                        </div>
+                                        <div class="col">
+                                            <input type="number" class="form-control" placeholder="Please enter a number">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div>
+                                            <button class="btn btn-info">CHK</button>
+                                            <p class="output"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q4" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Q-4
+                      </button>
+                    </h2>
+                    <div id="Q4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div class="row g-0">
+                            <div class="col-md-6" style="background-color: black; color: wheat;">
+                              <pre class="p-2" style="color: wheat;">
+                                <code>
+let value3="";
+inputs[4].addEventListener("keyup",(e)=>{
+    let reqExnum = /^(\d+$|-\d+$|-)/
+    if(reqExnum.test(e.key)){
+        value3+=e.key
+    }else{
+        outputs[3].innerHTML= 'Please Enter a Valied Number'
+        outputs[3].style.color="red"
+    }
+    if(inputs[4].value.length > 0){
+        console.log("iam in",value3)
+        if (+value3 > 0){
+            outputs[3].innerHTML = "Positive Num"
+            outputs[3].style.color = "#fff"
+            outputs[3].style.backgroundColor = "green"
+        }else{
+            outputs[3].innerHTML = "Negative Num"
+            outputs[3].style.color = "#fff"
+            outputs[3].style.backgroundColor = "red"
+        }
+    }else{
+        outputs[3].innerHTML = ""
+        outputs[3].style.backgroundColor = "#fff"
+    }
+})
+                                </code>
+                              </pre>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="card-body">
+                                <p class="card-text">Write a program that allows the user to insert an integer then print negative if it is
+                                    negative number otherwise print positive.</p>
+                                <p style="color: rgb(136, 39, 22);">We Accept only numbers</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="ms-2">
+                                        <input type="number" class="form-control" placeholder="Please Enter a number">
+                                    </div>
+                                    <div>
+                                        <p class="output"></p>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q5" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Q-5
+                      </button>
+                    </h2>
+                    <div id="Q5" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div class="row g-0">
+                            <div class="col-md-6" style="background-color: black; color: wheat;"">
+                                <pre class="p-2" style="color: wheat;">
+                                    <code>
+buttons[1].addEventListener("click",()=>{
+    let reqExnum = /^(\d+$|-\d+$|-)/
+    if(reqExnum.test(inputs[5].value) &&
+     reqExnum.test(inputs[6].value) && 
+     reqExnum.test(inputs[7].value)){
+        if(+inputs[5].value > +inputs[6].value && 
+        +inputs[5].value > +inputs[7].value){
+            outputs[4].innerHTML = "Max is "+inputs[5].value;
+            outputs[4].style.color="green"
+            if(+inputs[6] < +inputs[7]){
+                outputs[5].innerHTML = "Min is "+inputs[6].value;
+            }else{
+                outputs[5].innerHTML = "Min is "+inputs[7].value;
+            }    
+        }else if(+inputs[6].value > inputs[7].value){
+            outputs[4].innerHTML = "Max is "+inputs[6].value;
+            outputs[4].style.color="green"
+            if(+inputs[5] < +inputs[7]){
+                outputs[5].innerHTML = "Min is "+inputs[5].value;
+            }else{
+                outputs[5].innerHTML = "Min is "+inputs[7].value;
+            }
+        }else{
+            outputs[4].innerHTML = "Max is "+inputs[7].value;
+            outputs[4].style.color="green"
+            if(+inputs[5] < +inputs[6]){
+                outputs[5].innerHTML = "Min is "+inputs[5].value;
+            }else{
+                outputs[5].innerHTML = "Min is "+inputs[6].value;
+            }
+        }
+    }else{
+        outputs[4].innerHTML = "Please enter a valid numbers";
+        outputs[4].style.color = "red"
+        inputs[5].value = "";
+        inputs[6].value = "";
+        inputs[7].value = "";
+        outputs[5].value = "";
+    }
+    inputs[5].value = "";
+    inputs[6].value = "";
+    inputs[7].value = "";
+})
+                                        
+inputs[5].addEventListener("focus",()=>{
+    outputs[4].innerHTML = "";
+    outputs[5].innerHTML = "";
+})
+                                        
+inputs[6].addEventListener("focus",()=>{
+    outputs[4].innerHTML = "";
+    outputs[5].innerHTML = "";
+})
+                                        
+inputs[7].addEventListener("focus",()=>{
+    outputs[4].innerHTML = "";
+    outputs[5].innerHTML = "";
+})
+                                    </code>
+                                </pre>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="card-body">
+                                <p class="card-text">Write a program that take 3 integers from user then print the max element
+                                    and the min element..</p>
+                                <p style="color: rgb(136, 39, 22);">We Accept only numbers</p>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                          <div class="col">
+                                            <input type="number" class="form-control" placeholder="Please Enter a Number">
+                                          </div> 
+                                          <div class="col">
+                                            <input type="number" class="form-control" placeholder="Please Enter a Number">
+                                          </div> 
+                                          <div class="col">
+                                            <input type="number" class="form-control" placeholder="Please Enter a Number">
+                                          </div>  
+                                    </div>
+                                    <div class="row mt-2">
+                                        <p class="output"></p>
+                                        <p class="output"></p>
+                                    </div>
+                                    <div class="row ms-2">
+                                        <button class="btn btn-info">CHK</button>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q6" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Q-6
+                      </button>
+                    </h2>
+                    <div id="Q6" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div class="row g-0">
+                            <div class="col-md-6" style="background-color: black; color: wheat;">
+                                <pre class="p-2" style="color: wheat;">
+                                    <code>
+let value4="";
+inputs[8].addEventListener("keyup",(e)=>{
+    let reqExnum = /^(\d+$|-\d+$|-)/
+    value4+=e.key
+    if(e.key == "Backspace"){
+        value4 = inputs[8].value         
+    }
+    if(reqExnum.test(+value4)){
+        console.log("value = ",value4)
+        if (+value4%2===0){
+            outputs[6].innerHTML = "Even Number"
+            outputs[6].style.color = "#fff"
+            outputs[6].style.backgroundColor = "green"
+        }else{
+            outputs[6].innerHTML = "Odd Number"
+            outputs[6].style.color = "red"
+            outputs[6].style.backgroundColor = "yellow"
+        }  
+    }else{
+        outputs[6].innerHTML = "Please enter a valid number"
+        outputs[6].style.color = "red"
+    }
+if(inputs[8].value.length === 0){
+    outputs[6].innerHTML = ""
+}})
+                                        
+inputs[8].addEventListener("focusout",()=>{
+    outputs[6].innerHTML = ""
+    inputs[8].value = ""
+})
+                                    </code>
+                                </pre>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="card-body">
+                                <p class="card-text">Write a program that allows the user to insert integer number then
+                                    check If a number is even or odd.</p>
+                                <p style="color: rgb(136, 39, 22);">We Accept only numbers</p>
+                                <div class="container-fluid">
+                                    <div class="d-flex justify-content-between align-item-center">
+                                        <div class="col">
+                                            <input type="number" class="form-control">
+                                        </div>
+                                        <div class="col">
+                                            <p class="output ms-2 mt-2"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q7" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Q-7
+                      </button>
+                    </h2>
+                    <div id="Q7" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div class="row g-0">
+                            <div class="col-md-6" style="background-color: black; color: wheat;">
+                                <pre class="p-2" style="color: wheat;">
+                                    <code>
+inputs[9].addEventListener("keyup",(e)=>{
+    let regLet = /^[a-zA-Z]$/
+    let vowel = ["a","e","i","o","u"]
+    if(inputs[9].value.length > 1){
+    outputs[7].innerHTML='Please enter Single character only'
+        outputs[7].style.color = "red"
+    }else{
+        if(regLet.test(e.key)){
+            if(vowel.includes(e.key.toLowerCase())){
+                outputs[7].innerHTML='vowel'
+                outputs[7].style.color = "green"
+            }else{
+                outputs[7].innerHTML='Consonant'
+                outputs[7].style.color = "orange"
+            }
+        }else{
+            outputs[7].innerHTML='No number accepted'
+            outputs[7].style.color = "red"
+        }
+    }
+    if(e.key == "Backspace"){
+    outputs[7].innerHTML = ""       
+    }
+})
+inputs[9].addEventListener("focusout",()=>{
+    outputs[7].innerHTML = ""
+    inputs[9].value = ""
+})
+                                    </code>
+                                </pre>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="card-body">
+                                <p class="card-text">Write a program that take character from user then if it is vowel chars (a,e,I,o,u)
+                                    then print vowel otherwise print consonant</p>
+                              </div>
+                              <div class="container-fluid mt-2">
+                                <div class="row">
+                                    <div class="col d-flex justify-content-between ms-2">
+                                        <input type="text" class="form-control" placeholder="Please Enter a character">
+                                    </div>
+                                    <div class="col">
+                                        <p class="output"></p>
+                                    </div>    
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q8" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Q-8
+                      </button>
+                    </h2>
+                    <div id="Q8" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div class="row g-0">
+                            <div class="col-md-6" style="background-color: black; color: wheat;">
+                                <pre class="p-2" style="color: wheat;">
+                                    <code>
+let value5 = ""
+inputs[10].addEventListener("keyup",(e)=>{
+    let reqExnum = /^(\d+$|-\d+$|-)/
+    if(!reqExnum.test(e.key)){
+        value5+=e.key
+        outputs[8].innerHTML = "Please enter only numbers"
+        outputs[8].style.color = "red"
+    }else{
+        outputs[8].innerHTML = ""
+    }
+    if(e.key == "Backspace"){
+        outputs[8].innerHTML = ""  
+        inputs[10].value = ""     
+    }
+
+})
+buttons[2].addEventListener("click",()=>{
+    let value = []
+    if(inputs[10].value.length === 0){
+        outputs[8].innerHTML = "Please enter value first"
+        outputs[8].style.color = "red"
+    }else{
+        outputs[8].innerHTML = ""
+        for(let i=1; i <= +inputs[10].value ; i++){
+            value.push(i)
+        }
+        outputs[8].innerHTML = value
+        outputs[8].style.color = "green"
+        inputs[10].value = ""
+    }
+})
+inputs[10].addEventListener("focus",()=>{
+    outputs[8].innerHTML =""
+})
+                                    </code>
+                                </pre>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="card-body">
+                                <p class="card-text">Write aprogram that allow suser to insert integer then print all numbers between 1 to
+                                    thats number.</p>
+                                <p style="color: rgb(136, 39, 22);">We Accept only numbers</p>
+                                <div class="container-fluid">
+                                    <div class="d-flex flex-column g-1">
+                                        <div class="mt-2 ms-2">
+                                            <input type="number" class="form-control" placeholder="please Enter a number">
+                                            <button class="btn btn-info mt-2">Count</button>
+                                        </div>
+                                        <div>
+                                            <p class="output text-center"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q9" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Q-9
+                      </button>
+                    </h2>
+                    <div id="Q9" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div class="row g-0">
+                            <div class="col-md-6" style="background-color: black; color: wheat;">
+                                <pre class="p-2" style="color: wheat;">
+                                    <code>
+let value6 = ""
+inputs[11].addEventListener("keyup",(e)=>{
+    let reqExnum = /^(\d+$|-\d+$|-)/
+    if(!reqExnum.test(e.key)){
+        value6+=e.key
+        outputs[9].innerHTML = "Please enter only numbers"
+        outputs[9].style.color = "red"
+    }else{
+        outputs[9].innerHTML = ""
+    }
+    if(e.key == "Backspace"){
+        outputs[9].innerHTML = ""  
+        inputs[11].value = ""     
+    }
+
+})
+buttons[3].addEventListener("click",()=>{
+    let value = []
+    if(inputs[11].value.length === 0){
+        outputs[9].innerHTML = "Please enter value first"
+        outputs[9].style.color = "red"
+    }else{
+        outputs[9].innerHTML = ""
+        for(let i=1; i <= 12 ; i++){
+            value.push(+inputs[11].value * i)
+            console.log(value)
+        }
+        outputs[9].innerHTML = value
+        outputs[9].style.color = "green"
+        inputs[11].value = ""
+    }
+})
+
+inputs[11].addEventListener("focus",()=>{
+    outputs[9].innerHTML =""
+})
+                                    </code>
+                                </pre>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="card-body">
+                                <p class="card-text">Write a program that allows userto insert integerthen print a multiplication table up to 12.</p>
+                                <p style="color: rgb(136, 39, 22);">We Accept only numbers</p>
+                                <div class="container-fluid">
+                                    <div class="d-flex flex-column g-1">
+                                        <div class="mt-2 ms-2">
+                                            <input type="number" class="form-control" placeholder="please Enter a number">
+                                            <button class="btn btn-info mt-2">Count</button>
+                                        </div>
+                                        <div>
+                                            <p class="output text-center"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q10" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Q-10
+                      </button>
+                    </h2>
+                    <div id="Q10" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div class="row g-0">
+                            <div class="col-md-6" style="background-color: black; color: wheat;">
+                                <pre class="p-2" style="color: wheat;">
+                                    <code>
+let value7 = ""
+inputs[12].addEventListener("keyup",(e)=>{
+    let reqExnum = /^(\d+$|-\d+$|-)/
+    if(!reqExnum.test(e.key)){
+        value7+=e.key
+        outputs[10].innerHTML = "Please enter only numbers"
+        outputs[10].style.color = "red"
+    }else{
+        outputs[10].innerHTML = ""
+    }
+    if(e.key == "Backspace"){
+        outputs[10].innerHTML = ""  
+        inputs[12].value = ""     
+    }
+
+})
+buttons[4].addEventListener("click",()=>{
+    let value = []
+    if(inputs[12].value.length === 0){
+        outputs[10].innerHTML = "Please enter value first"
+        outputs[10].style.color = "red"
+    }else{
+        outputs[10].innerHTML = ""
+        for(let i=1; i <= +inputs[12].value ; i++){
+            if(i%2===0){
+                value.push(i)
+            }
+        }
+        outputs[10].innerHTML = value
+        outputs[10].style.color = "green"
+        inputs[12].value = ""
+    }
+})
+
+inputs[12].addEventListener("focus",()=>{
+    outputs[10].innerHTML =""
+})
+                                    </code>
+                                </pre>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="card-body">
+                                <p class="card-text">Writeaprogramthatallowstousertoinsertnumberthenprintallevennumbers
+                                    between 1 to this number</p>
+                                <p style="color: rgb(136, 39, 22);">We Accept only numbers</p>
+                                <div class="container-fluid">
+                                    <div class="d-flex flex-column g-1">
+                                        <div class="mt-2 ms-2">
+                                            <input type="number" class="form-control" placeholder="please Enter a number">
+                                            <button class="btn btn-info mt-2">Start</button>
+                                        </div>
+                                        <div>
+                                            <p class="output text-center"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q11" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Q-11
+                      </button>
+                    </h2>
+                    <div id="Q11" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div class="row g-0">
+                            <div class="col-md-6" style="background-color: black; color: wheat;">
+                                <pre class="p-2" style="color: wheat;">
+                                    <code>
+let value8 = ""
+inputs[13].addEventListener("keyup",(e)=>{
+    let reqExnum = /^(\d+$|-\d+$|-)/
+    if(!reqExnum.test(e.key)){
+        value7+=e.key
+        outputs[11].innerHTML = "Please enter only numbers"
+        outputs[11].style.color = "red"
+    }else{
+        outputs[11].innerHTML = ""
+    }
+    if(e.key == "Backspace"){
+        outputs[11].innerHTML = ""  
+        inputs[13].value = ""     
+    }
+})
+inputs[14].addEventListener("keyup",(e)=>{
+    let reqExnum = /^(\d+$|-\d+$|-)/
+    if(!reqExnum.test(e.key)){
+        value7+=e.key
+        outputs[11].innerHTML = "Please enter only numbers"
+        outputs[11].style.color = "red"
+    }else{
+        outputs[11].innerHTML = ""
+    }
+    if(e.key == "Backspace"){
+        outputs[11].innerHTML = ""  
+        inputs[14].value = ""     
+    }
+})
+
+buttons[5].addEventListener("click",()=>{
+    let value = 1;
+    if(inputs[13].value.length === 0 || inputs[14].value.length === 0){
+        outputs[11].innerHTML = "Please enter value first"
+        outputs[11].style.color = "red"
+    }else{
+        outputs[11].innerHTML = ""
+        for(let i=1; i <= +inputs[14].value ; i++){
+            value = value * +inputs[13].value
+        }
+        outputs[11].innerHTML = value
+        outputs[11].style.color = "green"
+        inputs[13].value = ""
+        inputs[14].value = ""
+    }
+})
+
+inputs[13].addEventListener("focus",()=>{
+    outputs[11].innerHTML =""
+})
+
+inputs[14].addEventListener("focus",()=>{
+    outputs[11].innerHTML =""
+})
+                                    </code>
+                                </pre>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="card-body">
+                                <p class="card-text">Writeaprogramthattaketwointegersthenprintthepower.</p>
+                                <p style="color: rgb(136, 39, 22);">We Accept only numbers</p>
+                              </div>
+                              <div class="d-flex flex-column">
+                                    <div class="ms-2">
+                                        <input type="number" class="form-control" placeholder="Please enter a number">
+                                    </div>
+                                    <div class="mt-2 ms-2">
+                                        <input type="number" class="form-control" placeholder="Please enter the Power">
+                                    </div>
+                                    <div class="mt-2">
+                                        <button class="btn btn-info">Result</button>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="output"></p>
+                                    </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q12" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Q-12
+                      </button>
+                    </h2>
+                    <div id="Q12" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div class="row g-0">
+                            <div class="col-md-6" style="background-color: black; color: wheat;">
+                                <pre class="p-2" style="color: wheat;">
+                                    <code>
+let numInputs = document.querySelectorAll(".q12");
+buttons[6].addEventListener("click",()=>{
+    let reqExnum = /^(\d+$|-\d+$|-)/
+    let total =0;
+    let av = 1;
+    let pre = 1;
+    let numbers = []
+    numInputs.forEach(input=>{
+        input.addEventListener("focus",()=>{
+            outputs[12].innerHTML = ""
+        })
+
+        if(input.value.length > 0 && reqExnum.test(input.value) 
+        && input.value <= 100){
+            total += +input.value
+            av = total/5
+            pre =(total/500)*100
+            numbers.push(input.value)
+            
+        }else{
+            outputs[12].innerHTML = "Please enter a valid number"
+            input.value=""
+        }
+    })
+    if(numbers.length === 5){
+        outputs[12].innerHTML = `Total = ${total} <br> Avg = ${av} <br> Percentage = ${pre}%`
+        numInputs.forEach(input=>[
+            input.value = ""
+        ])
+    }else{
+        outputs[12].innerHTML = "Please enter a valid number"
+    }
+})
+                                    </code>
+                                </pre>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Write a program to enter marks of five subjects and calculate total, average and
+                                    percentage..</p>
+                                <p style="color: rgb(136, 39, 22);">We Accept only numbers</p>
+                                <div class="d-flex flex-column">
+                                    <div class="ms-2">
+                                        <input type="number" class="form-control q12" placeholder="Please enter a number-1">
+                                    </div>
+                                    <div class="mt-2 ms-2">
+                                        <input type="number" class="form-control q12" placeholder="Please enter the number-2">
+                                    </div>
+                                    <div class="mt-2 ms-2">
+                                        <input type="number" class="form-control q12" placeholder="Please enter the number-3">
+                                    </div>
+                                    <div class="mt-2 ms-2">
+                                        <input type="number" class="form-control q12" placeholder="Please enter the number-4">
+                                    </div>
+                                    <div class="mt-2 ms-2">
+                                        <input type="number" class="form-control q12" placeholder="Please enter the number-5">
+                                    </div>
+                                    <div class="mt-2">
+                                        <button class="btn btn-info">Result</button>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="output"></p>
+                                    </div>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q13" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Q-13
+                      </button>
+                    </h2>
+                    <div id="Q13" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div class="row g-0">
+                            <div class="col-md-6" style="background-color: black; color: wheat;">
+                                <pre class="p-2" style="color: wheat;">
+                                    <code>
+inputs[20].addEventListener("keyup",(e)=>{
+    let reqExnum = /^(\d+$|-\d+$|-)/
+    let month31 = [1,3,5,7,8,10,12]
+    let month30 = [4,6,9,11]
+    let month = ""
+    if(reqExnum.test(e.key)){
+        month+=e.key
+        if(+inputs[20].value > 12){
+            outputs[13].innerHTML = "We have only 12 Month"
+            outputs[13].style.color = "red"
+        }else{
+            outputs[13].innerHTML = ""
+            if(month30.includes(+inputs[20].value)){
+                outputs[13].innerHTML = "30"
+                outputs[13].style.color = "green"
+            }else if(month31.includes(+inputs[20].value)){
+                outputs[13].innerHTML = "31"
+                outputs[13].style.color = "orange"
+            }else{
+                outputs[13].innerHTML = "28 or 29"
+                outputs[13].style.color = "wheat"
+            }
+        }
+    }else{
+        outputs[13].innerHTML = "Please enter number only"
+        outputs[13].style.color = "red"
+    }
+                                    
+if(e.key == "Backspace"){
+    outputs[13].innerHTML = ""  
+    inputs[20].value = ""     
+}                                          
+})
+                                    </code>
+                                </pre>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="card-body">
+                                <p class="card-text">Write a program to input month number and print number of days in that
+                                    month..</p>
+                                <p style="color: rgb(136, 39, 22);">We Accept only numbers</p>
+                                <div class="d-flex justify-content-between ms-2 mt-2">
+                                    <div>
+                                        <input type="text" class="form-control" placeholder="please enter the month sequance">
+                                    </div>
+                                    <div>
+                                        <p class="output"></p>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Q14" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Q-14
+                      </button>
+                    </h2>
+                    <div id="Q14" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div class="row g-0">
+                            <div class="col-md-6" style="background-color: black; color: wheat;">
+                                <pre class="p-2" style="color: wheat;">
+                                    <code>
+let marksinput = document.querySelectorAll(".q14");
+buttons[7].addEventListener("click", () => {
+  let reqExnum = /^(\d+$|-\d+$|-)/;
+  let marks = [];
+  let total = 0;
+  marksinput.forEach((mark) => {
+    if (reqExnum.test(mark.value) && +mark.value <= 100) {
+      total = total + +mark.value;
+      marks.push(mark.value);
+    } else {
+      console.log(mark.value.length);
+      if (!reqExnum.test(mark.value)) {
+        outputs[14].innerHTML = "Please enter marks in numbers";
+        outputs[14].style.color = "red";
+        mark.value = "";
+      } else if (+mark.value > 100) {
+        outputs[14].innerHTML = "Max value for mark is 100";
+        outputs[14].style.color = "red";
+        mark.value = "";
+      } else {
+        outputs[14].innerHTML = "please check values again";
+        outputs[14].style.color = "red";
+        mark.value = "";
+      }
+    }
+    let grade = (total / 500) * 100;
+    if (marks.length === 5) {
+      if (grade >= 90) {
+        outputs[14].innerHTML = `grade = ${grade}% <br> Grad A`;
+        outputs[14].style.color = "green";
+      } else if (grade >= 80) {
+        outputs[14].innerHTML = `grade = ${grade}% <br> Grad B`;
+        outputs[14].style.color = "green";
+      } else if (grade >= 70) {
+        outputs[14].innerHTML = `grade = ${grade}% <br> Grad C`;
+        outputs[14].style.color = "green";
+      } else if (grade >= 60) {
+        outputs[14].innerHTML = `grade = ${grade}% <br> Grad D`;
+        outputs[14].style.color = "green";
+      } else if (grade >= 40) {
+        outputs[14].innerHTML = `grade = ${grade}% <br> Grad E`;
+        outputs[14].style.color = "green";
+      } else {
+        outputs[14].innerHTML = `grade = ${grade}% <br> Grad F`;
+        outputs[14].style.color = "green";
+      }
+      marksinput.forEach((input) => {
+        input.value = "";
+      });
+    }
+  });
+});
+                                    </code>
+                                </pre>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="card-body">
+                                <p class="card-text">Write a program to input marks of five subjects
+                                    Physics, Chemistry, Biology, Mathematics and Computer
+                                    , Find percentage and grade.</p>
+                                <p style="color: rgb(136, 39, 22);">We Accept only numbers</p>
+                                <div class="d-flex flex-column">
+                                    <div class="ms-2">
+                                        <input type="number" class="form-control q14" placeholder="Physics mark">
+                                    </div>
+                                    <div class="mt-2 ms-2">
+                                        <input type="number" class="form-control q14" placeholder="Chemistry mark">
+                                    </div>
+                                    <div class="mt-2 ms-2">
+                                        <input type="number" class="form-control q14" placeholder="Biology mark">
+                                    </div>
+                                    <div class="mt-2 ms-2">
+                                        <input type="number" class="form-control q14" placeholder="Mathematics mark">
+                                    </div>
+                                    <div class="mt-2 ms-2">
+                                        <input type="number" class="form-control q14" placeholder="Computer mark">
+                                    </div>
+                                    <div class="mt-2">
+                                        <button class="btn btn-info">Result</button>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="output"></p>
+                                    </div>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <h2 class="text-center">Switch Case</h2>
+        <div class="position-relative pb-5">
+            <div class="cover show d-none"></div>
+            <div class=" answer show d-none ">
+                <div>
+                    <p class="text-center answer-title"></p>
+                </div>
+                <div>
+                    <a href="#" id="exit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                        </svg>
+                    </a>
+                    
+                </div>
+                <div>
+                    <input type="text" class="form-control d-none" id="single-input" placeholder="Please enter a number">
+                    <input type="text" class="form-control mt-2 d-none" id="double-input" placeholder="Please enter a number">
+                </div> 
+                <div>
+                    <button class="btn btn-info mt-2 d-none chk-answer " id="btn-q15">No. of days</button>
+                    <button class="btn btn-info mt-2 d-none chk-answer " id="btn-q16">CHK Vowel</button>
+                    <button class="btn btn-info mt-2 d-none chk-answer " id="btn-q17">Chk numbers</button>
+                    <button class="btn btn-info mt-2 d-none chk-answer " id="btn-q18">Even or Odd</button>
+                    <button class="btn btn-info mt-2 d-none chk-answer " id="btn-q19">Negative or Positive</button>
+                    <div class="btn-group mt-2 d-none chk-answer " role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary cal" value="+">+</button>
+                        <button type="button" class="btn btn-primary cal" value="-">-</button>
+                        <button type="button" class="btn btn-primary cal" value="*">*</button>
+                        <button type="button" class="btn btn-primary cal" value="/">/</button>
+                    </div>
+                </div>
+                <div> 
+                    <p class="text-center mt-2"  id="answers"></p>
+                </div>
+            </div>
+            <ul class="list-group " style="list-style: none;">
+                <li>
+                    <a href="#" class="list-group-item questions single" data = "0">Write a program to print total number of days in month</a>
+                </li>
+                <li>
+                    <a href="#" class="list-group-item questions single alph" data="1">Write a program to check whether an alphabet is vowel or consonant</a>
+                </li>
+                <li>
+                    <a href="#" class="list-group-item questions double" data="2">Write a program to find maximum between two numbers</a>
+                </li>
+                <li>
+                    <a href="#" class="list-group-item questions single" data="3">Write a program to check whether a number is even or odd</a>
+                </li>
+                <li>
+                    <a href="#" class="list-group-item questions single" data="4">Write a program to check whether a number is positive or negative or zero</a>
+                </li>
+                <li>
+                    <a href="#" class="list-group-item questions" data="5">Write a program to create Simple Calculator</a>
+                </li>
+            </ul>
+        </div>
+    </main>
+    
+    
+    
+    
+    
+    
+    <footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="./main.js"></script>
+    </footer>
+  </body>
+</html>
